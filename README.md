@@ -1,4 +1,12 @@
-# React Starter Kit
+# Weatherly Project
+
+### Tempestarii
+
+This project is a weather application for witches. Tempestarii is the name for weather witches in midieval lore. A witch/warlock can come to this site and find a description of the current weather, a 7 hour divination (forecast), and a ten day divination.
+Data comes from the weather underground api.
+
+
+### Installation
 
 To install the dependencies:
 
