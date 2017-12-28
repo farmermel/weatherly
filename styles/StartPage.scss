@@ -1,27 +1,19 @@
-section {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-}
-
-.App {
+.StartPage {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
-
-.App::before {
-  content: "";
-  position: absolute;
-  // top: 0;
-  // left: 0;
-  width: 100%; 
-  height: 100%;  
-  opacity: .6; 
-  z-index: -1;
-  background: url('../images/tarot5.jpg');
-  background-size: cover;
-  background-position: 0% 40%;
+  &:before {
+    content: "";
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%; 
+    height: 100%;  
+    opacity: .6; 
+    z-index: -1;
+    background: url('../images/tarot1.jpg');
+    background-size: cover;
+    background-position: 0% 40%;
+  }
 }
