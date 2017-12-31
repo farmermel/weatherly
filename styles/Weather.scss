@@ -2,10 +2,30 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin: 0 0 40px 0;
+}
+
+.Weather p {
   margin: 0;
 }
 
+.weather-now {
+  margin: 0 0 16px 0;
+}
+
+.description {
+  width: 22%;
+}
+
 .current-weather-icon {
-  margin-top: -50px;
-  width: 80%;
+  width: 100%;
+}
+
+.extremes {
+  width: 20%;
+}
+
+.current-extremes {
+  display: inline-block;
+  padding: 0 15px 0 0;
 }
