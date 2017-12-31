@@ -1,11 +1,26 @@
+// .TenDay {
+//   width: 90%;
+//   display: inline-flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   // border-bottom: solid 1px;
+//   border-bottom: solid 5px #cca1c1;
+// }
+
 .TenDay {
-  width: 90%;
   display: inline-flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px;
+  justify-content: space-between;
+  // at smaller sizes the side padding is what causes overlap
+  // have breakpoint that changes that
+  border: solid 5px #9378af;
+  border-radius: 80px;
+  margin: 10px 5px;
+  padding: 15px 60px;
+  background-color: #eeedef;
+  width: 90%;
 }
 
 .TenDay img {
-  width: 7%;
+  width: 75px;
 }
