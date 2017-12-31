@@ -14,6 +14,13 @@
   font-size: 3em;
 }
 
+.seven-label {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
 .seven-hr {
-  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: 100%;
 }
