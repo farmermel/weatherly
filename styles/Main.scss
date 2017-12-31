@@ -2,8 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #d4ccdd;
+  color: #1d1e2c;
+}
+
+.main-wrapper {
+  width: 85%;
 }
 
 .city {
   font-size: 3em;
+}
+
+.seven-hr {
+  display: flex;
 }
