@@ -6,6 +6,19 @@
   color: #1d1e2c;
 }
 
+#main-search {
+  height: 1em;
+  width: 35%;
+  border-style: none;
+  font-size: 2em;
+  padding: 10px;
+  background-image: url(../images/magnifier.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  text-indent: 43px;
+  background-position: 6px;
+}
+
 .main-wrapper {
   width: 85%;
 }
