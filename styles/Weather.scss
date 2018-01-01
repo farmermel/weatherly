@@ -7,14 +7,13 @@
 .Weather{
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: baseline;
   margin: 0 0 150px 0;
-  padding: 65px 5px 5px 5px;
-  background-color: #eeedef;
+  padding: 65px 5px 5px 25px;
+  background-color: #EEE8F2;
   border-radius: 135px;
   height: 310px;
-  border: solid 9px #9378af;
 }
 
 .Weather p {
