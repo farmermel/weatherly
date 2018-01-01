@@ -54,9 +54,21 @@
   width: 85%;
 }
 
+.main-wrapper header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .city {
   margin: 70px 10px 10px 10px;
   font-size: 3em;
+}
+
+.date {
+  margin: 0 70px 10px 10px;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .seven-label {
