@@ -10,7 +10,8 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  // height: 400px;
+  height: max-content;
   width: 100%;
   &:before {
     content: "";
@@ -23,6 +24,10 @@
     background-size: cover;
     background-position: 0% 33%;
   }
+}
+
+.header-wrapper h1 {
+  letter-spacing: 16px;
 }
 
 #main-search {
@@ -83,4 +88,21 @@
   display: inline-flex;
   justify-content: space-between;
   width: 90%;
+}
+
+@media screen and (max-width: 1140px) {
+  .header-wrapper h1 {
+    letter-spacing: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  // .header-wrapper {
+  //   font-size: 8px;
+  // }
+
+  .header-wrapper h1 {
+    // font-size: 3.8em;
+    letter-spacing: 4px;
+  }
 }
