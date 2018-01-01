@@ -18,6 +18,7 @@
 
 .Weather p {
   margin: 0;
+  font-size: 1.3em;
 }
 
 .weather-now {
@@ -39,4 +40,37 @@
 .current-extremes {
   display: inline-block;
   padding: 0 15px 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  .Weather {
+    flex-wrap: wrap;
+    padding: 65px 5px 75px 25px;
+  }
+
+  .Weather section {
+    height: max-content;
+  }
+
+  .Weather h1 {
+    font-size: 6em;
+  }
+
+  .weather-now {
+    margin: 0;
+  }
+
+  .description {
+    height: max-content;
+  }
+
+  .extremes {
+    width: 85%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  h4.current-extremes {
+    margin: 0;
+  }
 }

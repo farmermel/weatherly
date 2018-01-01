@@ -15,10 +15,10 @@ const data = {
       link: 'http://www.wunderground.com',
     },
     display_location: {
-      full: 'Louisville, KY',
-      city: 'Louisville',
-      state: 'KY',
-      state_name: 'Kentucky',
+      full: 'Salem, MA',
+      city: 'Salem',
+      state: 'MA',
+      state_name: 'Massachusetts',
       country: 'US',
       country_iso3166: 'US',
       zip: '40201',
@@ -30,8 +30,8 @@ const data = {
     },
     observation_location: {
       full:
-        'WAVE 3 News Weather Garden / 811 Call Before You Dig, Louisville, Kentucky',
-      city: 'WAVE 3 News Weather Garden / 811 Call Before You Dig, Louisville',
+        'WAVE 3 News Weather Garden / 811 Call Before You Dig, Salem, Kentucky',
+      city: 'WAVE 3 News Weather Garden / 811 Call Before You Dig, Salem',
       state: 'Kentucky',
       country: 'US',
       country_iso3166: 'US',
@@ -88,7 +88,7 @@ const data = {
     precip_today_metric: '0',
     icon: 'mostlycloudy',
     icon_url: 'http://icons.wxug.com/i/c/k/mostlycloudy.gif',
-    forecast_url: 'http://www.wunderground.com/US/KY/Louisville.html',
+    forecast_url: 'http://www.wunderground.com/US/KY/Salem.html',
     history_url:
       'http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KKYLOUIS193',
     ob_url:
