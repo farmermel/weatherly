@@ -15,11 +15,17 @@
   // have breakpoint that changes that
   border-radius: 80px;
   margin: 10px 5px;
-  padding: 15px 60px;
-  background-color: #EEE8F2;
+  padding: 15px 40px;
+  background-color: #eee8f2;
   width: 90%;
 }
 
 .TenDay img {
   width: 75px;
+}
+
+@media screen and (max-width: 800px) {
+  .TenDay {
+    padding: 15px 25px;
+  }
 }

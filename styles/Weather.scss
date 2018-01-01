@@ -11,7 +11,7 @@
   align-items: baseline;
   margin: 0 0 150px 0;
   padding: 65px 5px 5px 25px;
-  background-color: #EEE8F2;
+  background-color: #eee8f2;
   border-radius: 135px;
   height: 310px;
 }
@@ -42,7 +42,7 @@
   padding: 0 15px 0 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1140px) {
   .Weather {
     flex-wrap: wrap;
     padding: 65px 5px 75px 25px;
