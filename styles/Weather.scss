@@ -1,12 +1,24 @@
-.Weather {
+// .Weather {
+//   display: flex;
+//   width: 100%;
+//   justify-content: space-around;
+//   margin: 0 0 40px 0;
+// }
+.Weather{
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  margin: 0 0 40px 0;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin: 0 0 150px 0;
+  padding: 65px 5px 5px 25px;
+  background-color: #eee8f2;
+  border-radius: 135px;
+  height: 310px;
 }
 
 .Weather p {
   margin: 0;
+  font-size: 1.3em;
 }
 
 .weather-now {
@@ -17,7 +29,7 @@
   width: 22%;
 }
 
-.current-weather-icon {
+.hour-card-icon {
   width: 100%;
 }
 
@@ -28,4 +40,37 @@
 .current-extremes {
   display: inline-block;
   padding: 0 15px 0 0;
+}
+
+@media screen and (max-width: 1140px) {
+  .Weather {
+    flex-wrap: wrap;
+    padding: 65px 5px 75px 25px;
+  }
+
+  .Weather section {
+    height: max-content;
+  }
+
+  .Weather h1 {
+    font-size: 8em;
+  }
+
+  .weather-now {
+    margin: 0;
+  }
+
+  .description {
+    height: max-content;
+  }
+
+  .extremes {
+    width: 85%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  h4.current-extremes {
+    margin: 0;
+  }
 }

@@ -1,45 +1,120 @@
 .Main {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #d4ccdd;
+  flex-direction: column;
   color: #1d1e2c;
 }
 
+.header-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  // height: 400px;
+  height: max-content;
+  width: 100%;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%; 
+    height: 100%;  
+    opacity: .4; 
+    z-index: -1;
+    background: url('../images/tarot1.jpg');
+    background-size: cover;
+    background-position: 0% 33%;
+  }
+}
+
+.header-wrapper h1 {
+  letter-spacing: 16px;
+}
+
 #main-search {
-  height: 1em;
-  width: 35%;
+  border-radius: 8px;
   border-style: none;
-  font-size: 2em;
+  border: solid 3px #D5CDDA;
+  margin: 0 0 70px 0;
   padding: 10px;
   background-image: url(../images/magnifier.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  text-indent: 43px;
   background-position: 6px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  font-size: 2em;
+  text-indent: 43px;
+  height: 1em;
+  width: 35%;
+    &::placeholder {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #695b77;
+    }
 }
 
 .main-wrapper {
   width: 85%;
 }
 
+.main-wrapper header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .city {
+  margin: 70px 10px 10px 10px;
   font-size: 3em;
+}
+
+.date {
+  margin: 0 70px 10px 10px;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .seven-label {
   margin: 0 0 10px 0;
-  font-weight: 700;
+  // font-weight: 700;
 }
 
 .seven-hr {
-  white-space: nowrap;
+  margin: 0 0 150px 0;
   overflow-x: scroll;
+  white-space: nowrap;
   width: 100%;
+    &::-webkit-scrollbar {
+      border-radius: 5px;
+      height: 8px;
+      // background-color: #aaa;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: #443257; 
+    }
+}
+
+.ten-day-wrapper {
+  margin: 0 0 100px 0;
 }
 
 .ten-day-header {
   display: inline-flex;
   justify-content: space-between;
   width: 90%;
+}
+
+@media screen and (max-width: 1140px) {
+  .header-wrapper h1 {
+    letter-spacing: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  // .header-wrapper {
+  //   font-size: 8px;
+  // }
+
+  .header-wrapper h1 {
+    // font-size: 3.8em;
+    letter-spacing: 4px;
+  }
 }
