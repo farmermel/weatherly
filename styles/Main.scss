@@ -107,6 +107,11 @@
   .header-wrapper h1 {
     letter-spacing: 8px;
   }
+
+  .main-wrapper header {
+    flex-direction: column;
+    justify-content: normal;
+  }
 }
 
 @media screen and (max-width: 800px) {
