@@ -11,8 +11,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  // at smaller sizes the side padding is what causes overlap
-  // have breakpoint that changes that
   border-radius: 80px;
   margin: 10px 5px;
   padding: 15px 40px;
@@ -22,6 +20,12 @@
 
 .TenDay h3 {
   width: 14%;
+  margin: auto;
+}
+
+.TenDay div {
+  display: flex;
+  width: 50%;
   margin: auto;
 }
 
