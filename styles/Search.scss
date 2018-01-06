@@ -42,6 +42,12 @@ button {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .searchCity {
+    width: 330px;
+  }
+}
+
 @media screen and (max-width: 580px) {
   button {
     width: 60px; 

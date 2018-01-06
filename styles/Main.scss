@@ -31,6 +31,13 @@
   letter-spacing: 16px;
 }
 
+.home {
+  border-radius: 5px;
+  margin: 20px 0 0 20px;
+  width: 20%;
+  align-self: left;
+}
+
 #main-search {
   border-radius: 8px;
   border-style: none;
@@ -121,21 +128,17 @@
 }
 
 @media screen and (max-width: 800px) {
-  // .header-wrapper {
-  //   font-size: 8px;
-  // }
-
   .header-wrapper h1 {
     // font-size: 3.8em;
     letter-spacing: 4px;
   }
-
-  .searchCity {
-    width: 330px;
-  }
 }
 
 @media screen and (max-width: 580px) {
+  .home {
+    font-size: 1.3em;
+  }
+
   .Weather {
     flex-direction: column;
     /* justify-content: space-evenly; */
