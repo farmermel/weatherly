@@ -1,6 +1,5 @@
 .Main {
   display: flex;
-  //normally display flex
   align-items: center;
   flex-direction: column;
   color: #1d1e2c;
@@ -8,10 +7,9 @@
 
 .header-wrapper {
   display: flex;
-  position: relative;
-  flex-direction: column;
   align-items: center;
-  // height: 400px;
+  flex-direction: column;
+  position: relative;
   height: max-content;
   width: 100%;
   &:before {
@@ -29,6 +27,14 @@
 
 .header-wrapper h1 {
   letter-spacing: 16px;
+}
+
+.home {
+  align-self: left;
+  border-radius: 5px;
+  margin: 20px 0 0 20px;
+  font-size: 1.3em;
+  width: 20%;
 }
 
 #main-search {
@@ -74,7 +80,6 @@
 
 .seven-label {
   margin: 0 0 10px 0;
-  // font-weight: 700;
 }
 
 .seven-hr {
@@ -85,7 +90,6 @@
     &::-webkit-scrollbar {
       border-radius: 5px;
       height: 8px;
-      // background-color: #aaa;
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 5px;
@@ -103,6 +107,16 @@
   width: 90%;
 }
 
+.moon-label {
+  margin: 10px 0 20px 0;
+}
+
+.error {
+  border-radius: 200px;
+  padding: 11%;
+  background-color: #ce6458;
+}
+
 @media screen and (max-width: 1140px) {
   .header-wrapper h1 {
     letter-spacing: 8px;
@@ -115,12 +129,49 @@
 }
 
 @media screen and (max-width: 800px) {
-  // .header-wrapper {
-  //   font-size: 8px;
-  // }
+  .header-wrapper h1 {
+    letter-spacing: 4px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .home {
+    font-size: 1.3em;
+  }
+
+  .Weather {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Weather p {
+    font-size: 1.7em;
+  }
+
+  h4.current-extremes {
+    font-size: 2em;
+  }
+
+  .date {
+    font-size: 2em;
+  }
+
+  .current-weather-icon {
+    width: 190%;
+  }
 
   .header-wrapper h1 {
-    // font-size: 3.8em;
-    letter-spacing: 4px;
+    margin: 32px 0 15px 0;
+    font-size: 3.8em;
+    letter-spacing: 2px;
+  }
+
+  .app-label {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .error {
+    padding: 20% 6%;
   }
 }
