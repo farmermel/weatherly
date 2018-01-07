@@ -8,7 +8,7 @@ describe('StartPage', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<StartPage />);
+    wrapper = shallow(<StartPage onInitialSearch="Denver, CO" onType="Denver, CO" />);
   })
 
   it('should exist', () => {
@@ -18,6 +18,6 @@ describe('StartPage', () => {
   it('should render h1, h3, and Search component', () => {
     expect(wrapper.find('h1').length).toEqual(1);
     expect(wrapper.find('h3').length).toEqual(1);
-    expect(wrapper.find('Search')).toEqual(true);
+    expect(wrapper.find('Search')).toEqual(1);
   })
 })
