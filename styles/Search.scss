@@ -8,6 +8,7 @@
   text-indent: 50px;
   font-size: 1.7em;
   height: 100%;
+  outline: none;
   width: 500px;
 }
 
@@ -16,27 +17,20 @@
   margin: 0 0 50px 0;
 }
 
-// h1 {
-//   margin: 0 0 15px 0;
-//   color: #281921;
-//   font-size: 7em;
-//   font-weight: 400;
-// }
-
 .app-label {
   margin: 0 0 46px 0;
   color: #281921;
   font-size: 2em;
-  // font-weight: 400;
 }
 
 button {
   border-radius: 0 5px 5px 0;
-  height: 107%;
-  width: 100px;
   background-color: #685760;
   color: #fff;
   font-size: 1.7em;
+  height: 107%;
+  outline: none;
+  width: 100px;
   &:hover {
     background-color: #3f2834;
   }
