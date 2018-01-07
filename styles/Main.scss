@@ -1,6 +1,5 @@
 .Main {
   display: flex;
-  //normally display flex
   align-items: center;
   flex-direction: column;
   color: #1d1e2c;
@@ -11,7 +10,6 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  // height: 400px;
   height: max-content;
   width: 100%;
   &:before {
@@ -32,10 +30,11 @@
 }
 
 .home {
+  align-self: left;
   border-radius: 5px;
   margin: 20px 0 0 20px;
+  font-size: 1.3em;
   width: 20%;
-  align-self: left;
 }
 
 #main-search {
