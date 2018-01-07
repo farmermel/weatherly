@@ -18,6 +18,6 @@ describe('StartPage', () => {
   it('should render h1, h3, and Search component', () => {
     expect(wrapper.find('h1').length).toEqual(1);
     expect(wrapper.find('h3').length).toEqual(1);
-    expect(wrapper.find('Search')).toEqual(1);
+    expect(wrapper.find('<Search></Search>')).toEqual(1);
   })
 })
