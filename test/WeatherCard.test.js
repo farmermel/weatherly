@@ -34,7 +34,7 @@ describe('WeatherCard', () => {
 
     it('should render a seven hour card', () => {
       expect(wrapper.find('h3').length).toEqual(2);
-      expect(wrapper.find('h3').first().text()).toEqual('Hour of the Beetle');
+      expect(wrapper.find('h3').first().text()).toEqual('Hour of  the Raccoon');
 
       expect(wrapper.find('img').length).toEqual(1);
     })
@@ -54,7 +54,7 @@ describe('WeatherCard', () => {
 
     it('should render a ten day card', () => {
       expect(wrapper.find('h3').length).toEqual(3);
-      expect(wrapper.find('h3').first().text()).toEqual('Thursday');
+      expect(wrapper.find('h3').first().text()).toEqual('Sunday');
 
       expect(wrapper.find('img').length).toEqual(1);
     })
