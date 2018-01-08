@@ -9,19 +9,38 @@ describe('Search', () => {
   const mockFunction = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<Search onInitialSearch={mockFunction} onType={mockFunction} />)
+    wrapper = shallow(<Search getWeather={mockFunction} />)
   })
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   })
 
-  it('should render an input and button element', () => {
+  it('should render an input, two divs, and button element', () => {
     expect(wrapper.find('input').length).toEqual(1);
     expect(wrapper.find('button').length).toEqual(1);
+    expect(wrapper.find('div').length).toEqual(2); 
   })
 
-  it('should default to an empty string', () => {
-    expect(wrapper.state()).toEqual('');
+  it('should not render suggestions if there are none', () => {
+    expect(wrapper.find('Suggestion').length).toEqual(0);
+  })
+
+  it('should render as many suggestions as are in the suggestions array', () => {
+    expect(wrapper.find('Suggestion').length).toEqual(0);
+
+    wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX']});
+
+    expect(wrapper.find('Suggestion').length).toEqual(2);
+  })
+
+  it('should render suggestions that match text of suggestions array', () => {
+    wrapper = mount(<Search getWeather={mockFunction} />)
+    wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX']});
+
+    expect(wrapper.find('Suggestion').first().text()).toEqual('Denver, CO');
   })
 })
+
+
+
