@@ -14,14 +14,12 @@ describe('WeatherCard', () => {
   let wrapper;
 
   it('should exist', () => {
-    wrapper = shallow(<WeatherCard key={0} cardType='hour-card' fcst={sevenHrFcst[0]}/>);
+    wrapper = shallow(<WeatherCard key={0} cardType='hour-card' fcst={sevenHrFcst[0]} />);
 
     expect(wrapper).toBeDefined();
   })
 
   it('should take props', () => {
-    //key is not a prop -- why?? Is this a react thing?
-    // expect(wrapper.instance().props.key).toEqual(0);
     expect(wrapper.instance().props.cardType).toEqual('hour-card');
     expect(wrapper.instance().props.fcst).toEqual(sevenHrFcst[0]);
   })
@@ -29,7 +27,7 @@ describe('WeatherCard', () => {
   describe('sevenHourCard', () => {
 
     beforeEach(() => {
-      wrapper = shallow(<WeatherCard key={0} cardType='hour-card' fcst={sevenHrFcst[0]}/>);
+      wrapper = shallow(<WeatherCard key={0} cardType='hour-card' fcst={sevenHrFcst[0]} />);
     })
 
     it('should render a seven hour card', () => {
@@ -44,7 +42,7 @@ describe('WeatherCard', () => {
   describe('tenDayCard', () => {
 
     beforeEach(() => {
-      wrapper = shallow(<WeatherCard key={0} cardType='TenDay' fcst={tenDayFcst}/>);
+      wrapper = shallow(<WeatherCard key={0} cardType='TenDay' fcst={tenDayFcst} />);
     })
 
     it('should take props', () => {

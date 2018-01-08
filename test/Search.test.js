@@ -3,7 +3,6 @@ import { mount, shallow } from 'enzyme';
 import Search from '../lib/Search.js';
 import mockData from '../__mocks__/mockData2.js';
 
-
 describe('Search', () => {
   let wrapper;
   const mockFunction = jest.fn()
@@ -30,17 +29,20 @@ describe('Search', () => {
     expect(wrapper.find('Suggestion').length).toEqual(0);
 
     wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX']});
-
     expect(wrapper.find('Suggestion').length).toEqual(2);
+
+    wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX', 'Dearborn, MI', 'Detroit, MI']});
+    expect(wrapper.find('Suggestion').length).toEqual(4);
   })
 
   it('should render suggestions that match text of suggestions array', () => {
     wrapper = mount(<Search getWeather={mockFunction} />)
+    
     wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX']});
-
     expect(wrapper.find('Suggestion').first().text()).toEqual('Denver, CO');
+
+    wrapper.setState({ suggestions: ['Denton, TX', 'Denver, CO']});
+    expect(wrapper.find('Suggestion').first().text()).toEqual('Denton, TX');
+
   })
 })
-
-
-
