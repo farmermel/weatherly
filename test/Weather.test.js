@@ -47,10 +47,10 @@ describe('Weather', () => {
     wrapper = mount(<Weather current={ourData}/>);
 
     expect(wrapper.find('h3').first().text()).toEqual('Now');
-    // expect(wrapper.find('h1').first().text()).toEqual('88' + &deg + 'F');
+    expect(wrapper.find('h1').first().text()).toEqual('88°F');
     expect(wrapper.find('p').first().text()).toEqual('Clear');
     expect(wrapper.find('p').last().text()).toEqual('Mostly clear. Lows overnight in the low 60s.');
-    // expect(wrapper.find('h2').first().text()).toEqual('88');
-    // expect(wrapper.find('h2').last().text()).toEqual('60');
+    expect(wrapper.find('h2').first().text()).toEqual('88°F');
+    expect(wrapper.find('h2').last().text()).toEqual('60°F');
   })
 })
