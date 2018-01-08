@@ -17,6 +17,7 @@ errorData.currentObservation = null;
 errorData.forecast = null;
 errorData.hourlyForecast = null;
 errorData.moonPhase = null;
+errorData.error = "error";
 
 describe('Main', () => {
 
@@ -66,16 +67,24 @@ describe('Main', () => {
     expect(wrapper.find('Weather').length).toEqual(1);
     expect(wrapper.find('.seven-hr').length).toEqual(1);
     expect(wrapper.find('.seven-hr WeatherCard').length).toEqual(36);
+    expect(wrapper.find('.seven-hr WeatherCard').first().text()).toEqual("Hour of  the Raccoon78°F");
+    expect(wrapper.find('.seven-hr WeatherCard').last().text()).toEqual("Hour of  the Goat65°F");
+    
+
     expect(wrapper.find('.ten-day-wrapper').length).toEqual(1);
     expect(wrapper.find('.ten-day-wrapper WeatherCard').length).toEqual(10);
+    expect(wrapper.find('.ten-day-wrapper WeatherCard').first().text()).toEqual("Sunday88°F60°F");
+    expect(wrapper.find('.ten-day-wrapper WeatherCard').last().text()).toEqual("Tuesday93°F63°F");
+
     expect(wrapper.find('MoonPhase').length).toEqual(1);
+    expect(wrapper.find('MoonPhase').first().text()).toEqual("Waning Gibbous");
   })
 
   it('should render city, date, Weather, Seven Hour forecast, tenDay forecast, and moonPhase', () => {
     wrapper = mount(<Main data={errorData} onBackToHome={mockFunction} getWeather={mockFunction} />);
     
-    expect(wrapper.find('h3').length).toEqual(1);
-    expect(wrapper.find('img').length).toEqual(1);    
+    expect(wrapper.find('h3').length).toEqual(2);
+    expect(wrapper.find('h3').first().text()).toEqual('Weather Divination for the Modern Witch');   
+    expect(wrapper.find('h3').last().text()).toEqual('error');   
   })
-
 })
