@@ -7,7 +7,7 @@ Data comes from the weather underground api.
 
 ### Wireframes
 
-[Wireframes](./weatherlyWirefram.bmpr)
+![Wireframes](./weatherlyWireframe.png)
 
 ### Finished Design
 
