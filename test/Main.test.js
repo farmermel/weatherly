@@ -1,41 +1,90 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import Main from '../lib/Main.js';
+import mockData from '../__mocks__/mockData2.js';
+
+let ourData = {};
+
+ourData.currentObservation = mockData.current_observation;
+ourData.forecast = mockData.forecast;
+ourData.hourlyForecast = mockData.hourly_forecast;
+ourData.moonPhase = mockData.moon_phase;
+
+
+let errorData = {};
+
+errorData.currentObservation = null;
+errorData.forecast = null;
+errorData.hourlyForecast = null;
+errorData.moonPhase = null;
+errorData.error = "error";
 
 describe('Main', () => {
 
   let wrapper;
   const mockFunction = jest.fn()
-
   beforeEach(() => {
-    wrapper = shallow(<Main data={mockFunction} onInitialSearch={mockFunction} onType={mockFunction} onBackToHome={mockFunction} /> );
+    wrapper = shallow(<Main data={ourData} onBackToHome={mockFunction} getWeather={mockFunction} /> );
   })
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   })
 
-  it('should have prop data, onInitialSearch, onType and onBackToHome that are functions', () => {
+  it('should have prop data, onBackToHome, and getWeather that are functions', () => {
     expect(wrapper.instance().props.data).toBeDefined();
-    expect(typeof wrapper.instance().props.data).toEqual('function');
-    
-    expect(wrapper.instance().props.onInitialSearch).toBeDefined();
-    expect(typeof wrapper.instance().props.onInitialSearch).toEqual('function');
-    
-    expect(wrapper.instance().props.onType).toBeDefined();
-    expect(typeof wrapper.instance().props.onType).toEqual('function');
+    expect(typeof wrapper.instance().props.data).toEqual('object');
 
     expect(wrapper.instance().props.onBackToHome).toBeDefined();
     expect(typeof wrapper.instance().props.onBackToHome).toEqual('function');
+    
+    expect(wrapper.instance().props.getWeather).toBeDefined();
+    expect(typeof wrapper.instance().props.getWeather).toEqual('function');
   })
 
-  it('should render button, h1, and h3 in the header', () => {
+  it('should render button, h1, h3, and Search in the header', () => {
     expect(wrapper.find('button').length).toEqual(1);
     expect(wrapper.find('button').text()).toEqual('Back to Home');
+    
     expect(wrapper.find('h1').length).toEqual(1);
     expect(wrapper.find('h1').text()).toEqual('Tempestarii');
-    expect(wrapper.find('h3').length).toEqual(1);
-    expect(wrapper.find('h3').text()).toEqual('Weather Divination for the Modern Witch');
+    
+    expect(wrapper.find('h3').length).toEqual(6);
+    expect(wrapper.find('h3').first().text()).toEqual('Weather Divination for the Modern Witch');
+
+    expect(wrapper.find('Search').length).toEqual(1);
+    expect(wrapper.find('Search').text()).toEqual('<Search />');
   })
 
+  it('should render city, date, Weather, Seven Hour forecast, tenDay forecast, and moonPhase', () => {
+    wrapper = mount(<Main data={ourData} onBackToHome={mockFunction} getWeather={mockFunction} />);
+    
+    expect(wrapper.find('h2').length).toEqual(6);
+    expect(wrapper.find('h2').first().text()).toEqual('Co, Guinea-Bissau');
+    expect(wrapper.find('h2').last().text()).toEqual('Moon Phase Divination');
+    expect(wrapper.find('h3').length).toEqual(110);
+    expect(wrapper.find('h3').last().text()).toEqual('Waning Gibbous');
+    expect(wrapper.find('Weather').length).toEqual(1);
+    expect(wrapper.find('.seven-hr').length).toEqual(1);
+    expect(wrapper.find('.seven-hr WeatherCard').length).toEqual(36);
+    expect(wrapper.find('.seven-hr WeatherCard').first().text()).toEqual("Hour of  the Raccoon78°F");
+    expect(wrapper.find('.seven-hr WeatherCard').last().text()).toEqual("Hour of  the Goat65°F");
+    
+
+    expect(wrapper.find('.ten-day-wrapper').length).toEqual(1);
+    expect(wrapper.find('.ten-day-wrapper WeatherCard').length).toEqual(10);
+    expect(wrapper.find('.ten-day-wrapper WeatherCard').first().text()).toEqual("Sunday88°F60°F");
+    expect(wrapper.find('.ten-day-wrapper WeatherCard').last().text()).toEqual("Tuesday93°F63°F");
+
+    expect(wrapper.find('MoonPhase').length).toEqual(1);
+    expect(wrapper.find('MoonPhase').first().text()).toEqual("Waning Gibbous");
+  })
+
+  it('should render city, date, Weather, Seven Hour forecast, tenDay forecast, and moonPhase', () => {
+    wrapper = mount(<Main data={errorData} onBackToHome={mockFunction} getWeather={mockFunction} />);
+    
+    expect(wrapper.find('h3').length).toEqual(2);
+    expect(wrapper.find('h3').first().text()).toEqual('Weather Divination for the Modern Witch');   
+    expect(wrapper.find('h3').last().text()).toEqual('error');   
+  })
 })
