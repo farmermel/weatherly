@@ -6,11 +6,10 @@ import mockData from '../__mocks__/mockData2.js';
 
 describe('Search', () => {
   let wrapper;
-  let onInitialSearch = 'Denver, CO';
-  let onType = 'Denver, CO';
+  const mockFunction = jest.fn()
 
   beforeEach(() => {
-    wrapper = mount(<Search onInitialSearch={onInitialSearch} onType={onType} />)
+    wrapper = shallow(<Search onInitialSearch={mockFunction} onType={mockFunction} />)
   })
 
   it('should exist', () => {
@@ -20,5 +19,9 @@ describe('Search', () => {
   it('should render an input and button element', () => {
     expect(wrapper.find('input').length).toEqual(1);
     expect(wrapper.find('button').length).toEqual(1);
+  })
+
+  it('should default to an empty string', () => {
+    expect(wrapper.state()).toEqual('');
   })
 })
