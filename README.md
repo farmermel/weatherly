@@ -7,6 +7,8 @@ Data comes from the weather underground api.
 
 ### Wireframes
 
+[Wireframes](./weatherlyWirefram.bmpr)
+
 ### Finished Design
 
 ![Tempestarii Weather App](https://i.imgur.com/WW3yIrP.png)
