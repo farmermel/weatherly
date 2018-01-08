@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import StartPage from '../lib/StartPage.js';
+import mockData from '../__mocks__/mockData2.js';
 
 describe('StartPage', () => {
 
@@ -8,7 +9,7 @@ describe('StartPage', () => {
   const mockFunction = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<StartPage onInitialSearch={mockFunction} onType={mockFunction} />);
+    wrapper = shallow(<StartPage data={mockData} getWeather={mockFunction} />);
   })
 
   it('should exist', () => {
@@ -22,12 +23,12 @@ describe('StartPage', () => {
     expect(wrapper.find('h3').text()).toEqual('Weather Divination for the Modern Witch');
   })
 
-  it('should have prop onInitialSearch and onType that are functions', () => {
-    expect(wrapper.instance().props.onInitialSearch).toBeDefined();
-    expect(typeof wrapper.instance().props.onInitialSearch).toEqual('function');
+  it('should have prop data and getWeather that are functions', () => {
+    expect(wrapper.instance().props.data).toBeDefined();
+    expect(typeof wrapper.instance().props.data).toEqual('object');
 
-    expect(wrapper.instance().props.onType).toBeDefined();
-    expect(typeof wrapper.instance().props.onType).toEqual('function');
+    expect(wrapper.instance().props.getWeather).toBeDefined();
+    expect(typeof wrapper.instance().props.getWeather).toEqual('function');
   })
 
   it('should render search', () => {
