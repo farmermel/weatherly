@@ -36,9 +36,19 @@ button {
   }
 }
 
+.suggest-wrapper {
+  height: 120px;
+  width: 83.5%;
+  overflow: scroll;
+}
+
 @media screen and (max-width: 800px) {
   .searchCity {
     width: 330px;
+  }
+
+  .suggest-wrapper {
+    width: 77.5%;
   }
 }
 
@@ -49,6 +59,10 @@ button {
 
   .searchCity {
     width: 175px;
+  }
+
+  .suggest-wrapper {
+    width: 75.5%;
   }
   
 }
