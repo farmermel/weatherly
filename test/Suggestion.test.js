@@ -8,7 +8,7 @@ describe('Suggestion', () => {
   const mockFunction = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<Suggestion place={mockFunction} onSelect={mockFunction} key={mockFunction} />);
+    wrapper = shallow(<Suggestion place='' onSelect={mockFunction} key={mockFunction} />);
   })
 
   it('should exist', () => {
