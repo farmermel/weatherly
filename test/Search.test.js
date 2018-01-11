@@ -6,6 +6,9 @@ import mockData from '../__mocks__/mockData2.js';
 describe('Search', () => {
   let wrapper;
   const mockFunction = jest.fn()
+  const otherFakeFunction = () => {
+    wrapper.setState({ clicked: true })
+  }
 
   beforeEach(() => {
     wrapper = shallow(<Search getWeather={mockFunction} />)
@@ -43,7 +46,13 @@ describe('Search', () => {
 
     wrapper.setState({ suggestions: ['Denton, TX', 'Denver, CO']});
     expect(wrapper.find('Suggestion').first().text()).toEqual('Denton, TX');
+  })
 
+  it('should make selection when suggestion is clicked', () => {
+    wrapper = mount(<Search getWeather={otherFakeFunction} />)
+
+    wrapper.find('button').simulate('click', otherFakeFunction);
+    expect(wrapper.state().clicked).toEqual(true)
   })
 
   it('should a list of suggestions upon input', () => {

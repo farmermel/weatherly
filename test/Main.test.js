@@ -49,7 +49,7 @@ describe('Main', () => {
     expect(wrapper.find('h1').length).toEqual(1);
     expect(wrapper.find('h1').text()).toEqual('Tempestarii');
     
-    expect(wrapper.find('h3').length).toEqual(6);
+    expect(wrapper.find('h3').length).toEqual(2);
     expect(wrapper.find('h3').first().text()).toEqual('Weather Divination for the Modern Witch');
 
     expect(wrapper.find('Search').length).toEqual(1);
