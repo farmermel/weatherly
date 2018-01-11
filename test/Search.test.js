@@ -40,7 +40,7 @@ describe('Search', () => {
 
   it('should render suggestions that match text of suggestions array', () => {
     wrapper = mount(<Search getWeather={mockFunction} />)
-    
+
     wrapper.setState({ suggestions: ['Denver, CO', 'Denton, TX']});
     expect(wrapper.find('Suggestion').first().text()).toEqual('Denver, CO');
 
@@ -53,5 +53,13 @@ describe('Search', () => {
 
     wrapper.find('button').simulate('click', otherFakeFunction);
     expect(wrapper.state().clicked).toEqual(true)
+  })
+
+  it('should select a suggestion when clicked', () => {
+    wrapper = mount(<Search />)
+    const event = {target: {value: "Denv"}};
+
+    wrapper.find('input').simulate('change', event);
+    expect(wrapper.find('p').first().text()).toEqual('Denver, CO');
   })
 })
