@@ -55,13 +55,11 @@ describe('Search', () => {
     expect(wrapper.state().clicked).toEqual(true)
   })
 
-  it('should a list of suggestions upon input', () => {
-    wrapper = mount(<Search getWeather={mockFunction} />)
+  it('should select a suggestion when clicked', () => {
+    wrapper = mount(<Search />)
     const event = {target: {value: "Denv"}};
 
-    wrapper.instance().onType(event);
-    expect(wrapper.state('Suggestion')).to.equal('Denver, CO')
-    // wrapper.find('input').simulate('change', event);
-    // expect(wrapper.find('Suggestions').first()).toEqual('Denver, CO')
+    wrapper.find('input').simulate('change', event);
+    expect(wrapper.find('p').first().text()).toEqual('Denver, CO');
   })
 })
