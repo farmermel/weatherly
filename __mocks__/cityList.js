@@ -1,6 +1,7 @@
 export default {
   "data": [
     "New York, NY",
+    "Ithaca, NY",
     "Los Angeles, CA",
     "Chicago, IL",
     "Houston, TX",
@@ -999,7 +1000,9 @@ export default {
     "Keizer, OR",
     "Spanish Fork, UT",
     "Beloit, WI",
-    "Panama City, FL"
+    "Panama City, FL",
+    "Paris, FR",
+    "Bucharest, RO"
   ]
 }
 
