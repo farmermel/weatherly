@@ -1,6 +1,6 @@
 # Weatherly Project
 
-###Live Project
+### Live Project
 See this project live [here](http://melenasuliteanu-tempestarii.surge.sh/)
 
 ### Tempestarii
